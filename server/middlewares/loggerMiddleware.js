@@ -1,4 +1,4 @@
-import History from "../models/History";
+import History from "../models/History.js";
 
 /**
  * Logger une action utilisateur
