@@ -9,8 +9,9 @@ const Product = sequelize.define("Product", {
   price: { type: DataTypes.FLOAT, allowNull: false },
   quantity: { type: DataTypes.INTEGER, allowNull: false },
   image: { type: DataTypes.STRING, allowNull: false },
-  createdAt: { type: DataTypes.DATE, defaultValue: DataTypes.NOW },
-  updatedAt: { type: DataTypes.DATE, defaultValue: DataTypes.NOW }
+  createdAtStock: { type: DataTypes.DATE, defaultValue: DataTypes.NOW }, // entrée stock
+  lastModifiedBy: { type: DataTypes.INTEGER }, // UserId
+  lastModifiedAt: { type: DataTypes.DATE, defaultValue: DataTypes.NOW }
 });
 
 Product.belongsTo(User);
